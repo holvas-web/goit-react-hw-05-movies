@@ -8,7 +8,6 @@ import { Reviews } from './Reviews/Reviews';
 
 export const RoutesItem = () => {
   return (
-    <div>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/movies" element={<Movies />} />
@@ -17,6 +16,5 @@ export const RoutesItem = () => {
         <Route path="/movies/:id/reviews" element={<Reviews />} />
         <Route path="/*" element={<Outlet />} />
       </Routes>
-    </div>
   );
 };
