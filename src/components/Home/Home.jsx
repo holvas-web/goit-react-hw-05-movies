@@ -10,7 +10,7 @@ export function Home() {
     const fetchTrendingMovies = async () => {
       try {
         const response = await axios.get(
-          'https://api.themoviedb.org/3/movie/550?api_key=2c3efb2d795661188f5f8e1565ebf9ff',
+          'https://api.themoviedb.org/3/',
           {
             params: {
               api_key: '2c3efb2d795661188f5f8e1565ebf9ff',
