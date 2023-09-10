@@ -1,21 +1,21 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import { Home } from './Home/Home';
 import { Movies } from './Movies/Movies';
 import { MovieDetails } from './MovieDetails/MovieDetails';
 import { Cast } from './Cast/Cast';
 import { Reviews } from './Reviews/Reviews';
 
-export const Routes = () => {
+export const RoutesItem = () => {
   return (
     <div>
-      <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/movies" exact component={Movies} />
-        <Route path="/movies/:id" exact component={MovieDetails} />
-        <Route path="/movies/:id/cast" component={Cast} />
-        <Route path="/movies/:id/reviews" component={Reviews} />
-      </Switch>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/movies" element={<Movies />} />
+        <Route path="/movies/:id" element={<MovieDetails />} />
+        <Route path="/movies/:id/cast" element={<Cast />} />
+        <Route path="/movies/:id/reviews" element={<Reviews />} />
+      </Routes>
     </div>
   );
 };
