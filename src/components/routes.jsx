@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Outlet, Routes } from 'react-router-dom';
 import { Home } from './Home/Home';
 import { Movies } from './Movies/Movies';
 import { MovieDetails } from './MovieDetails/MovieDetails';
@@ -15,6 +15,7 @@ export const RoutesItem = () => {
         <Route path="/movies/:id" element={<MovieDetails />} />
         <Route path="/movies/:id/cast" element={<Cast />} />
         <Route path="/movies/:id/reviews" element={<Reviews />} />
+        <Route path="/*" element={<Outlet />} />
       </Routes>
     </div>
   );
