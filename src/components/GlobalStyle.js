@@ -34,4 +34,8 @@ export const GlobalStyle = createGlobalStyle `
     input {
         margin: 10px;
     }
+
+    h1 {
+        text-align: center;
+    }
 `

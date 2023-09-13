@@ -7,7 +7,8 @@ export const NavWrap = styled.nav `
     justify-content: space-evenly;
 `;
 
-export const Wrapper = styled.div `
-    padding-left: 30px;
-    line-height: 1.25;
+export const RoutesWrap = styled.div `
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 `
