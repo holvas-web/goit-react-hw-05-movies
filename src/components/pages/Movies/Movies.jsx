@@ -3,6 +3,7 @@
 // Movies.js
 import React, { useState } from 'react';
 import { searchMovies } from 'services/api';
+import { Wrapper } from './MoviesStyled.styled';
 
 export function Movies() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -22,7 +23,7 @@ export function Movies() {
   };
 
   return (
-    <div>
+    <Wrapper>
       <h1>Search Movies</h1>
       <input
         type="text"
@@ -39,6 +40,6 @@ export function Movies() {
           ))}
         </ul>
       )}
-    </div>
+    </Wrapper>
   );
 } 
