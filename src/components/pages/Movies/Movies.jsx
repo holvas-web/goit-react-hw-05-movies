@@ -4,6 +4,7 @@
 import React, { useState } from 'react';
 import { searchMovies } from 'services/api';
 import { Wrapper } from './MoviesStyled.styled';
+import { Link } from 'react-router-dom';
 
 export function Movies() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -36,7 +37,9 @@ export function Movies() {
       ) : (
         <ul>
           {searchResults.map((movie) => (
-            <li key={movie.id}>{movie.title}</li>
+            <li key={movie.id}>
+              <Link to={`/movies/${movie.id}`}>{movie.title}</Link>
+            </li>
           ))}
         </ul>
       )}
