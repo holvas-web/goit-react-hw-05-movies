@@ -4,6 +4,7 @@
 import React, { useState, useEffect } from 'react';
 import { fetchMovieReviews } from 'services/api';
 import { useParams } from 'react-router-dom';
+import { Wrapper } from '../Reviews/Reviews.styled';
 
 
 export function Reviews() {
@@ -26,7 +27,7 @@ export function Reviews() {
   }, [id]);
 
   return (
-   <div>
+   <Wrapper>
       <h1>Reviews</h1>
       {isLoading ? (
         <p>Loading...</p>
@@ -40,7 +41,7 @@ export function Reviews() {
           ))}
         </ul>
       )}
-    </div>
+    </Wrapper>
   );
 }
 
