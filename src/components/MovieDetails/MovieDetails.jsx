@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams  } from 'react-router-dom';
 import { fetchMovieDetails } from 'services/api';
-import { useParams } from 'react-router-dom';
+import { Wrapper } from '../MovieDetails/MovieDetails.styled';
 
 export function MovieDetails() {
   const { id } = useParams();
@@ -27,12 +27,12 @@ export function MovieDetails() {
       {isLoading ? (
         <p>Loading...</p>
       ) : (
-        <div>
+        <Wrapper>
           <h1>{movieDetails.title}</h1>
           <p>{movieDetails.overview}</p>
           <Link to={`/movies/${id}/cast`}>Cast</Link>
           <Link to={`/movies/${id}/reviews`}>Reviews</Link>
-        </div>
+        </Wrapper>
       )}
     </div>
   );
