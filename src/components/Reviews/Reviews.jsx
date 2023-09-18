@@ -3,15 +3,18 @@
 // Reviews.js
 import React, { useState, useEffect } from 'react';
 import { fetchMovieReviews } from 'services/api';
+import { useParams } from 'react-router-dom';
 
-export function Reviews({ match }) {
+
+export function Reviews() {
+  const { id } = useParams();
   const [reviews, setReviews] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-
+  
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const reviewData = await fetchMovieReviews(match.params.id);
+        const reviewData = await fetchMovieReviews(id);
         setReviews(reviewData);
         setIsLoading(false);
       } catch (error) {
@@ -20,7 +23,7 @@ export function Reviews({ match }) {
     };
 
     fetchData();
-  }, [match.params.id]);
+  }, [id]);
 
   return (
    <div>
