@@ -3,7 +3,7 @@ import { Link, useParams  } from 'react-router-dom';
 import { fetchMovieDetails } from 'services/api';
 import { Wrapper } from '../MovieDetails/MovieDetails.styled';
 
-export function MovieDetails() {
+function MovieDetails() {
   const { id } = useParams();
   const [movieDetails, setMovieDetails] = useState({});
   const [isLoading, setIsLoading] = useState(true);
@@ -37,3 +37,5 @@ export function MovieDetails() {
     </div>
   );
 }
+
+export default MovieDetails

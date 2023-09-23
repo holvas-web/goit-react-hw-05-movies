@@ -4,7 +4,7 @@ import { fetchTrendingMovies } from 'services/api';
 import { Link } from 'react-router-dom';
 // import { MovieDetails } from '../MovieDetails/MovieDetails';
 
-export function Home() {
+function Home() {
   const [trendingMovies, setTrendingMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -47,4 +47,4 @@ export function Home() {
   );
 }
 
-
+export default Home

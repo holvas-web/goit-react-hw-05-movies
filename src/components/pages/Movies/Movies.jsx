@@ -6,7 +6,7 @@ import { searchMovies } from 'services/api';
 import { Wrapper } from './MoviesStyled.styled';
 import { Link } from 'react-router-dom';
 
-export function Movies() {
+function Movies() {
   const [searchQuery, setSearchQuery] = useState('');
   const [searchResults, setSearchResults] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -46,3 +46,5 @@ export function Movies() {
     </Wrapper>
   );
 } 
+
+export default Movies

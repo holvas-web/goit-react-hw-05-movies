@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { fetchMovieCast } from 'services/api';
 import { useParams } from 'react-router-dom'; // Додали імпорт useParams
 
-export function Cast() {
+function Cast() {
   const [cast, setCast] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const { id } = useParams(); // Використовуємо useParams для отримання id з роутера
@@ -37,6 +37,7 @@ export function Cast() {
   );
 }
 
+export default Cast
 
 // // Cast.js
 // import React, { useState, useEffect, useParams } from 'react';

@@ -7,7 +7,7 @@ import { useParams } from 'react-router-dom';
 import { Wrapper } from '../Reviews/Reviews.styled';
 
 
-export function Reviews() {
+function Reviews() {
   const { id } = useParams();
   const [reviews, setReviews] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -45,5 +45,6 @@ export function Reviews() {
   );
 }
 
+export default Reviews
 
 
