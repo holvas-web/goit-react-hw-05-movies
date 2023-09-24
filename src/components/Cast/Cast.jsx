@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { fetchMovieCast } from 'services/api';
 import { useParams } from 'react-router-dom'; // Додали імпорт useParams
-
+import { CastList, CastItem, CastImg} from '../Cast/CastStyled.styled'
 function Cast() {
   const [cast, setCast] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const { id } = useParams(); // Використовуємо useParams для отримання id з роутера
+  const IMAGE_URL = 'https://image.tmdb.org/t/p/w500';
 
   useEffect(() => {
     const fetchData = async () => {
@@ -27,11 +28,14 @@ function Cast() {
       {isLoading ? (
         <p>Loading...</p>
       ) : (
-        <ul>
+        <CastList>
           {cast.map((actor) => (
-            <li key={actor.id}>{actor.name}</li>
+            <CastItem key={actor.id}>
+              <CastImg src={IMAGE_URL + actor.profile_path} alt={actor.name} />
+              <span>{actor.name}</span>
+            </CastItem>
           ))}
-        </ul>
+        </CastList>
       )}
     </div>
   );

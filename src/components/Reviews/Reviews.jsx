@@ -1,5 +1,3 @@
-// src/components/Reviews.js
-
 // Reviews.js
 import React, { useState, useEffect } from 'react';
 import { fetchMovieReviews } from 'services/api';

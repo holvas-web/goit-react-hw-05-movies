@@ -1,7 +1,7 @@
 // import React, { Suspense } from 'react';
 import { lazy, Suspense } from 'react';
 import { Route, Outlet, Routes, Link } from 'react-router-dom';
-import { NavWrap, RoutesWrap } from '../App/AppStyled.styled';
+import { NavWrap, RoutesWrap, LinkMovies } from '../App/AppStyled.styled';
 
 const Home = lazy(() => import ('../pages/Home/Home'));
 const Movies = lazy(() => import ('../pages/Movies/Movies'));
@@ -14,8 +14,12 @@ export const App = () => {
     <div> 
       <NavWrap>
         <Link to="/" end='true'>Home</Link>
-        <Link to="/movies" end='true'>Movies</Link>
+        <LinkMovies>
+          <Link to="/movies" end='true' className="link">Movies</Link>
+        </LinkMovies>
       </NavWrap> 
+
+      <hr />
 
       <Suspense fallback={<div>Loading...</div>}>
         <RoutesWrap>

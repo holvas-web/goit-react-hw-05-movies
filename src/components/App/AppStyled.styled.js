@@ -1,11 +1,12 @@
 import styled from "styled-components";
 
 export const NavWrap = styled.nav `
-    display: flex;
-    padding-top: 50px;
-    padding-bottom: 30px;
-    justify-content: space-evenly;
+    padding: 30px 20px;
 `;
+
+export const LinkMovies = styled.a `
+    padding-left: 20px;
+`
 
 export const RoutesWrap = styled.div `
     display: flex;
