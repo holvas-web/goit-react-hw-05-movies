@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const CastList = styled.ul `
+export const Cast = styled.ul `
     display: flex;
     flex-wrap: wrap;
     margin: -15px;
@@ -26,4 +26,12 @@ export const CastImg = styled.img `
         transform: scale(1.03);
         cursor: pointer;
     }
+`
+export const CastItem_text = styled.p `
+    text-align: center;
+    color: black;
+    font-size: 16px;
+`
+export const CastItems_text = styled.span `
+    font-weight: bold;
 `

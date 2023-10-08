@@ -11,6 +11,12 @@ export const GlobalStyle = createGlobalStyle `
     -moz-osx-font-smoothing: grayscale;
     }
 
+    *,
+    *::before,
+    *::after {
+    box-sizing: inherit;
+    }
+
     code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
         monospace;
@@ -37,5 +43,15 @@ export const GlobalStyle = createGlobalStyle `
 
     h1 {
         text-align: center;
+    }
+
+    img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    span {
+        font-weight: bold;
     }
 `
