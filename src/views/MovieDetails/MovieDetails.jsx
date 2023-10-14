@@ -1,6 +1,6 @@
 import { useState, useEffect, lazy, Suspense } from 'react';
 import { NavLink, Routes, Route, useParams, useNavigate, useLocation } from 'react-router-dom';
-import Loader from '../../components/Loader/Loader.jsx'
+import Audio from '../../components/Loader/Loader.jsx'
 import { fetchMoviesId, IMAGE_URL } from '../../services/api';
 import styles from '../../components/Navigation/Navigation.module.css';
 // import '../style.css';
@@ -82,7 +82,7 @@ export default function MovieDetails() {
 
                     <hr />
                     
-                    <Suspense fallback={<Loader />}>
+                    <Suspense fallback={<Audio />}>
                         <Routes>
                             <Route path={`/movies/${movieId}/cast`}>
                                 <Cast movieId={movieId} />
