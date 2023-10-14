@@ -1,13 +1,13 @@
 import {lazy, Suspense} from 'react';
 import { Route, Routes } from 'react-router-dom';
-import Container from './components/Container/Container';
-import Header from './components/Header/Header';
-import Loader from './components/Loader/';
+import Container from '../Container/Container';
+import Header from '../Header/Header';
+import Loader from '../Loader/';
 
-const HomePage = lazy(() => import('./views/Home'))
-const MoviesPage = lazy(() => import('./views/Movies'))
-const MovieDetailsPage = lazy(() => import('./views/MovieDetails/MovieDetails'))
-const NotFoundView = lazy(() => import('./views/NotFoundView.js'))
+const HomePage = lazy(() => import('../../views/Home'))
+const MoviesPage = lazy(() => import('../../views/Movies'))
+const MovieDetailsPage = lazy(() => import('../../views/MovieDetails/MovieDetails'))
+const NotFoundView = lazy(() => import('../../views/NotFoundView.js'))
 
 
 export default function App() {

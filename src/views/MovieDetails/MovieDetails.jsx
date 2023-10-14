@@ -1,8 +1,8 @@
 import { useState, useEffect, lazy, Suspense } from 'react';
 import { NavLink, Routes, Route, useParams, useNavigate, useLocation } from 'react-router-dom';
-import Loader from '../components/Loader'
+import Loader from '../../components/Loader/Loader.jsx'
 import { fetchMoviesId, IMAGE_URL } from '../../services/api';
-import styles from '../components/Navigation/Navigation.module.css';
+import styles from '../../components/Navigation/Navigation.module.css';
 // import '../style.css';
 
 const Cast = lazy(() => import('../Cast/Cast'));
