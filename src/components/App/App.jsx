@@ -15,15 +15,13 @@ export default function App() {
     <Container>
       <Header />
       <Suspense fallback={<Loader />}>
-      <Routes>
-        <Route exact path="/"><HomePage /></Route>
-        <Route exact path="/movies"><MoviesPage /></Route>
-        <Route path="/movies/:movieId"><MovieDetailsPage /></Route>
-        <Route><NotFoundView /></Route>
-      </Routes>
-
+        <Routes>
+          <Route exact path="/"><HomePage /></Route>
+          <Route exact path="/movies"><MoviesPage /></Route>
+          <Route path="/movies/:movieId"><MovieDetailsPage /></Route>
+          <Route><NotFoundView /></Route>
+        </Routes>
       </Suspense>
-
     </Container>
   )
 }
