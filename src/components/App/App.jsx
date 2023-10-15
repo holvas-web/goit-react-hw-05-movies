@@ -16,8 +16,8 @@ export default function App() {
       <Header />
       <Suspense fallback={<Loader />}>
         <Routes>
-          <Route exact path="/"><HomePage /></Route>
-          <Route exact path="/movies"><MoviesPage /></Route>
+          <Route path="/"><HomePage /></Route>
+          <Route path="/movies"><MoviesPage /></Route>
           <Route path="/movies/:movieId"><MovieDetailsPage /></Route>
           <Route><NotFoundView /></Route>
         </Routes>
