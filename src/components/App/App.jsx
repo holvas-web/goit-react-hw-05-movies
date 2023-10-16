@@ -1,5 +1,5 @@
 import {lazy, Suspense} from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Outlet } from 'react-router-dom';
 import Container from '../Container/Container';
 import Header from '../Header/Header';
 import Loader from '../Loader/Loader';
@@ -16,9 +16,10 @@ export default function App() {
       <Header />
       <Suspense fallback={<Loader />}>
         <Routes>
-          <Route path="/"><HomePage /></Route>
-          <Route path="/movies"><MoviesPage /></Route>
+          <Route exact path="/" element={<HomePage />} />
+          <Route exact path="/movies"><MoviesPage /></Route>
           <Route path="/movies/:movieId"><MovieDetailsPage /></Route>
+          <Route path="/*"><Outlet /></Route>
           <Route><NotFoundView /></Route>
         </Routes>
       </Suspense>
