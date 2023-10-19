@@ -2,7 +2,7 @@ import {lazy, Suspense} from 'react';
 import { Route, Routes, Outlet } from 'react-router-dom';
 import Container from '../Container/Container';
 import Header from '../Header/Header';
-// import Loader from '../Loader/Loader';
+import Loader from '../Loader/Loader';
 
 const HomePage = lazy(() => import('../../views/Home'))
 const MoviesPage = lazy(() => import('../../views/Movies'))
@@ -14,18 +14,18 @@ export default function App() {
   return (
     <Container>
       <Header />
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback = {<Loader />}>
         <Routes>
           <Route exact path="/" element={<HomePage />} />
-          <Route exact path="/movies"><MoviesPage /></Route>
-          <Route path="/movies/:movieId"><MovieDetailsPage /></Route>
-          <Route path="/*"><Outlet /></Route>
+          <Route exact path="/movies" element={<MoviesPage />} />
+          <Route path="/movies/:movieId" element={<MovieDetailsPage />} />
+          <Route path="/*" element={<Outlet />} />
           <Route><NotFoundView /></Route>
         </Routes>
       </Suspense>
     </Container>
   )
-}
+};
 
 
 // // import React, { Suspense } from 'react';
