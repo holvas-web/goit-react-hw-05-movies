@@ -1,57 +1,46 @@
-import { createGlobalStyle } from "styled-components";
 import 'modern-normalize';
+import { createGlobalStyle } from 'styled-components';
 
-export const GlobalStyle = createGlobalStyle `
-    body {
+export const GlobalStyle = createGlobalStyle`
+body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-        sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    }
+	  margin: 0;
+    width: 100%;
+    height: 70vh;
 
-    *,
-    *::before,
-    *::after {
-    box-sizing: inherit;
-    }
+    background: black;
+  }
 
-    code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-        monospace;
-    }
 
-    ul {
-        list-style: none;
-        list-style: none;
-        line-height: 1.25;
-        padding-top: 20px;
-    }
 
-    p {
-        padding: 0;
-    }
+ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
 
-    a {
-        text-decoration: none;
-    }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin: 0;
+}
 
-    input {
-        margin: 10px;
-    }
 
-    h1 {
-        text-align: center;
-    }
 
-    img {
-        display: block;
-        max-width: 100%;
-        height: auto;
-    }
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
 
-    span {
-        font-weight: bold;
-    }
-`
+a {
+  text-decoration: none;
+}
+`;
